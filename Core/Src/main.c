@@ -273,19 +273,19 @@ int main(void)
 			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_SET);
 			if(!EEPROM_ERRO)
 			{
-				EEPROM_Write_W_CHECK(DATA_ADDR_ADDR,&data_addr,1);
+				EEPROM_Write_W_CHECK(DATA_ADDR_ADDR,&data_addr,1);// @NOTE 
 			}
 			epd_flag = 1;
 		}
 		else if(key == 2)
 		{
-			data_addr += 0x10;//data_addr add, change to next UID
+			data_addr += 0x10;//data_addr add, change to next UID// @NOTE 
 			if(data_addr>(0x10*ID_NUM))
 				data_addr = 0x10;
 			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_15,GPIO_PIN_SET);
 			if(!EEPROM_ERRO)
 			{
-				EEPROM_Write_W_CHECK(DATA_ADDR_ADDR,&data_addr,1);
+				EEPROM_Write_W_CHECK(DATA_ADDR_ADDR,&data_addr,1);// @NOTE 
 			}
 			epd_flag = 1;
 		}
